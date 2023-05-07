@@ -27,9 +27,6 @@ cd MERN-FitnessTracker
 - Express
 - React
 - Node.js
-- Redux
-- Axios
-- JWT Authentication
 
 ## Contributing
 
