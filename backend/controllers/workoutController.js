@@ -29,7 +29,7 @@ const createWorkout = async (req, res) => {
         const workout = await Workout.create({ title, load, reps });
         res.status(200).json(workout);
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        res.status(400).json({ error: error.message })
     }
 };
 //update a workout
@@ -40,7 +40,7 @@ const updateWorkout = async (req, res) => {
         res.status(404).json({ error: 'Invalid id' });
     }
 
-    const workout = await Workout.findOneAndUpdate({ _id: id },{
+    const workout = await Workout.findOneAndUpdate({ _id: id }, {
         ...req.body
     });
 
